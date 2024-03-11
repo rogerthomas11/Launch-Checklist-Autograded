@@ -68,10 +68,15 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         h2.style.color = 'red';
     };
 
-    if (validateInput(pilot) !== "Empty" && validateInput(copilot) !== "Empty" && validateInput(fuelLevel) === "Is a Number" && fuelLevel> 10000 && validateInput(cargoLevel) === "Is a Number" && cargoLevel < 10000) {
+    if (validateInput(pilot) !== "Empty" 
+        && validateInput(copilot) !== "Empty" 
+        && validateInput(fuelLevel) === "Is a Number" 
+        && fuelLevel> 10000 
+        && validateInput(cargoLevel) === "Is a Number" 
+        && cargoLevel < 10000) {
         document.getElementById("faultyItems").style.visibility = "visible";
-        h2.style.color = 'green';
         h2.innerHTML = "Shuttle is Ready for Launch";
+        h2.style.color = 'green';
     }
  }
  

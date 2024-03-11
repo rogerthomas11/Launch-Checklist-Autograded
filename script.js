@@ -13,7 +13,6 @@ window.addEventListener("load", function() {
     // })
 
     let button = document.getElementById("formSubmit");
-    console.log("stink");
     button.addEventListener("click", function(event) {
         list = document.getElementById("faultyItems");
         pilot = document.querySelector("input[name=pilotName]").value;
@@ -25,7 +24,7 @@ window.addEventListener("load", function() {
         
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
     });
-    //declare what below elements are
-    //call formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
+    //declare what below elements are -RT
+    //call formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) -RT
  });
 
