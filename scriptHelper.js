@@ -2,22 +2,22 @@
 
 require('cross-fetch/polyfill');
 
-// function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-//     // Here is the HTML formatting for our mission target div.
-//     let missionTarget = document.getElementById("missionTarget");
-//     console.log(missionTarget.attributes["id"])
-//     missionTarget.innerHTML = `
-//                  <h2>Mission Destination</h2>
-//                  <ol>
-//                      <li>Name: ${name}</li>
-//                      <li>Diameter: ${diameter}</li>
-//                      <li>Star: ${star}</li>
-//                      <li>Distance from Earth: ${distance}</li>
-//                      <li>Number of Moons: ${moons}</li>
-//                  </ol>
-//                  <img src="${imageUrl}">
-//     `
-//  }
+function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
+    // Here is the HTML formatting for our mission target div.
+    let missionTarget = document.getElementById("missionTarget");
+    console.log(missionTarget.attributes["id"])
+    missionTarget.innerHTML = `
+                 <h2>Mission Destination</h2>
+                 <ol>
+                     <li>Name: ${name}</li>
+                     <li>Diameter: ${diameter}</li>
+                     <li>Star: ${star}</li>
+                     <li>Distance from Earth: ${distance}</li>
+                     <li>Number of Moons: ${moons}</li>
+                 </ol>
+                 <img src="${imageUrl}">
+    `
+ }
  
  function validateInput(testInput) {
     if (testInput === "") {
@@ -72,21 +72,21 @@ require('cross-fetch/polyfill');
     }
  }
  
-//  async function myFetch() {
-//      let planetsReturned;
+ async function myFetch() {
+     let planetsReturned;
  
-//      planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-//          return response.json()
-//         });
-//      return planetsReturned;
-//  }
+     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+         return response.json()
+        });
+     return planetsReturned;
+ }
  
-//  function pickPlanet(planets) {
-//     let planetIndex = {};
-//     // Get random number and get planet at that index
-//     planetIndex = Math.floor(Math.random() * planets.length);
-//     return planets[planetIndex];
-//  }
+ function pickPlanet(planets) {
+    let planetIndex = {};
+    // Get random number and get planet at that index
+    planetIndex = Math.floor(Math.random() * planets.length);
+    return planets[planetIndex];
+ }
  
  module.exports.addDestinationInfo = addDestinationInfo;
  module.exports.validateInput = validateInput;
